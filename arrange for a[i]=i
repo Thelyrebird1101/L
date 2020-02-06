@@ -1,0 +1,22 @@
+public class Sum{
+	public static void main(String[] args) {
+		int [] arr = {-1, -1, 6, 1, 9, 3, 2, -1, 4, -1};
+	int n = arr.length;
+	HashSet<Integer> hs = new HashSet<Integer>();
+	for (int i = 0; i < arr.length; i++) {
+		if(!hs.contains(arr[i]))
+			hs.add(arr[i]);
+	}
+	for (int i = 0; i < n; i++) {
+		if(!hs.contains(i))
+			arr[i]=-1;
+		else {
+			arr[i]=i;
+		}
+		
+	}
+	for (int i = 0; i < arr.length; i++) {
+		System.out.print(arr[i]+" ");
+	}
+	}
+	}
